@@ -1,0 +1,16 @@
+{% extends 'basse.html' %}
+
+{% block content%}
+
+{% for d in dataset %}
+<div class="main">
+    Item name: <a href="{{ d.id }}">{{ d.name }}</a><br/>
+    Item price: {{ d.price }}<br/>
+    Item discount: {{ d.discount }}<br/>
+    <a href="{{ d.id }}/update">update</a><br>
+    <a href="{{ d.id }}/delete">delete</a><br>
+    <hr>
+ 
+</div>
+{% endfor %}
+{% endblock %}
